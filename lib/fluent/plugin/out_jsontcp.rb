@@ -48,6 +48,7 @@ module Fluent
             begin
                 content = ''
                 es.each {|time,record|
+                    record["time"] = "#{time}"
                     content << "#{@output_proc.call(record)}"
                 }
                 sock.puts content
