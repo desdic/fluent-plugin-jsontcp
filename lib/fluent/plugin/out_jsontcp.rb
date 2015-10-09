@@ -60,10 +60,6 @@ module Fluent
             return false
         end
 
-        def secondary_init(primary)
-            # don't warn even if primary.class is not FileOutput
-        end
-
         private
 
     end
