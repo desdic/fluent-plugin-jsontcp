@@ -24,21 +24,14 @@ Or install it yourself as:
 ...
 <match rsyslog.** legacyrsyslog.**>
   type jsontcp
-  path /tmp/fluentd-data
-  utc
-  include_time_key
-  time_format %s
   format json
-   buffer_type file
-   buffer_path /var/log/td-agent/fluent_buffer0
-   buffer_chunk_limit 1k
-   buffer_queue_limit 8192
-   flush_interval 1s
-   <secondary>
-   type file
-   path /var/log/td-agent/failed_fluent_records0
-   </secondary>
-
+  utc
+  port 3540
+  buffer_type file
+  buffer_path /var/log/td-agent/fluent_buffer0
+  buffer_chunk_limit 1k
+  buffer_queue_limit 8192
+  flush_interval 1s
 </match>
 ...
 ```
