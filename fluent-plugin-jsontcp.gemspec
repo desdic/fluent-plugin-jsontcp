@@ -3,7 +3,7 @@ $:.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-jsontcp"
-  spec.version       = "1.0"
+  spec.version       = "1.1"
   spec.authors       = ["Kim Gert Nielsen"]
   spec.email         = ["me@greyhat.dk"]
 
