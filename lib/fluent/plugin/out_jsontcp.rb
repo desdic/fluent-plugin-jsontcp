@@ -48,8 +48,12 @@ module Fluent
             begin
                 content = ''
                 es.each {|time,record|
-                    record["time"] = "#{time}"
-                    content << "#{@output_proc.call(record)}"
+                    begin
+                        record["time"] = "#{time}"
+                        content << "#{@output_proc.call(record)}"
+                    rescue
+                        # Ignore faulty records (Without time)
+                    end
                 }
                 sock.puts content
                 return
