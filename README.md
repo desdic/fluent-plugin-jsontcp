@@ -1,5 +1,7 @@
 # Fluent::Plugin::Jsontcp
 
+*This project is no longer maintained*
+
 Simple plugin for Fluentd to export JSON to a TCP socket
 
 ## Installation
